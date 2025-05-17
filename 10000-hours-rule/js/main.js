@@ -26,7 +26,7 @@ document.getElementById("planForm").addEventListener("submit", function (e) {
   const hours = Number(document.getElementById("hours").value);
   const days = hours > 0 ? Math.ceil(10000 / hours) : 0;
   document.getElementById(
-    "result-topic"
+    "result-field"
   ).innerHTML = `당신은 <em class="highlight">${field}</em> 전문가가 되기 위해서 <br>`;
 
   document.getElementById(
@@ -44,14 +44,17 @@ const closeTrainModal = document.getElementById("close-train-modal");
 
 trainBtn.addEventListener("click", function () {
   trainModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
 });
 
 closeTrainModal.addEventListener("click", function () {
   trainModal.style.display = "none";
+  document.body.style.overflow = "";
 });
 
 trainModal.addEventListener("click", function (e) {
   if (e.target === trainModal) trainModal.style.display = "none";
+  document.body.style.overflow = "";
 });
 
 // 공유하기 버튼

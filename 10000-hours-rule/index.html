@@ -5,46 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1만 시간의 법칙</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <!-- reset.css 및 스타일 시트 -->
+    <!-- reset.css 및 스타일 시트  + favicon.ico-->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   </head>
+  <!-- center : 수평 가운데 정렬 -->
+  <!-- col-center : 수직 가운데 정렬 -->
   <body class="col-center">
-    <header class="center">
-      <h1 class="col-center">
-        <img src="img/clock.png" alt="시계 배경" class="center" />
-        <img src="img/title.png" alt="1만 시간의 법칙" class="center" />
-      </h1>
+    <header class="col-center">
+      <h1 class="sr-only">1만 시간의 법칙</h1>
+      <img
+        src="img/clock.png"
+        alt="원 모양 시계 배경 이미지 음영"
+        class="center"
+      />
+      <img
+        src="img/title.png"
+        alt="1만 시간의 법칙 로고 이미지"
+        class="center"
+      />
     </header>
     <main class="col-center">
-      <!-- 웹 페이지 주제와 관련된 인용구 section -->
-      <section class="quote col-center">
-        <q class="center">연습은 어제의 당신보다 당신을 더 낫게 만든다.</q>
-        <div class="quote-group">
-          <p><em>1만 시간의 법칙</em> 은</p>
-          <p>어떤 분야의 전문가가 되기 위해서는</p>
-          <p>최소한 1만 시간의 훈련이 필요다는 법칙이다.</p>
-        </div>
+      <!-- Section-1. 1만 시간의 법칙의 필요성 -->
+      <section class="subject col-center">
+        <h2 class="sr-only">1만 시간의 법칙의 필요성</h2>
+        <!-- 짧은 인용구 -->
+        <article>
+          <h3 class="sr-only">1만 시간의 법칙의 필요를 강조하는 인용구</h3>
+          <q class="center">연습은 어제의 당신보다 당신을 더 낫게 만든다.</q>
+        </article>
+        <article class="definition-group">
+          <h3 class="sr-only">1만 시간의 법칙의 정의</h3>
+          <div class="quotation-66"></div>
+          <p>
+            <dfn>1만 시간의 법칙</dfn>은<br />
+            어떤 분야의 전문가가 되기 위해서는<br />
+            최소한 1만 시간의 훈련이 필요다는 법칙이다.
+          </p>
+          <div class="quotation-99"></div>
+        </article>
       </section>
-      <!-- 웹 페이지 주 기능 관련 section-->
-      <section>
+      <!-- Section-2. 1만 시간 계산 입력 및 출력 -->
+      <section class="io">
+        <h2 class="sr-only">1만 시간을 계산해보자!</h2>
         <form id="planForm" class="col-center">
           <div class="first-line center">
-            <p class="center">나는</p>
+            <p>나는</p>
             <input
               type="text"
               id="field"
               name="field"
               placeholder="예)프로그래밍"
               required
-              class="topic"
+              class="field"
             />
-            <p class="center">전문가가 될 것이다.</p>
+            <p>전문가가 될 것이다.</p>
           </div>
           <div class="second-line center">
-            <p class="center">그래서 앞으로 매일 하루에</p>
-            <span class="input-line">
+            <p>그래서 앞으로 매일 하루에</p>
+            <!-- 추후 반응형 웹 구현(2줄->3줄) span -->
+            <span class="third-line">
               <input
                 type="number"
                 id="hours"
@@ -55,36 +76,40 @@
                 required
                 class="hours"
               />
-              <p class="center">시간씩 훈련할 것이다.</p>
+              <p>시간씩 훈련할 것이다.</p>
             </span>
           </div>
-          <button class="btn-common">
+          <button class="btn-common input-btn">
             나는 며칠동안 훈련을 해야 1만 시간이 될까?
           </button>
         </form>
-        <!-- 버튼 출력결과 -->
+        <!-- 1만 시간 계산 출력 결과 -->
         <div id="result-group" class="result-group col-center hidden">
-          <p id="result-topic" class="center result"></p>
-          <p id="result-hours" class="center result"></p>
+          <p id="result-field" class="result center"></p>
+          <p id="result-hours" class="result center"></p>
         </div>
       </section>
+      <!-- Section-3. 결과 출력 후 버튼 그룹 -->
       <section id="button-group" class="button-group center hidden">
-        <button id="train-btn" class="btn-common">훈련하러가기 GO! GO!</button>
-        <button id="share-btn" class="btn-common">공유하기</button>
+        <h2 class="sr-only">훈련하러가기 버튼과 공유하기 버튼그룹</h2>
+        <button id="train-btn" class="btn-common train-btn">
+          훈련하러가기 GO! GO!
+        </button>
+        <button id="share-btn" class="btn-common share-btn">공유하기</button>
       </section>
       <!-- 훈련하러가기 모달-->
       <div id="train-modal" class="modal" style="display: none">
-        <div class="modal-content col-center">
+        <div class="modal-content">
           <h2 class="sr-only">화이팅 팝업창</h2>
           <p><em>화이팅!!♥♥♥</em></p>
           <p>당신의 꿈을 응원합니다!</p>
-          <img src="img/licat.png" alt="응원하는 라이켓" />
+          <img src="img/licat.png" alt="응원하는 라이켓 이미지" />
           <button
             id="close-train-modal"
             style="cursor: pointer"
             class="btn-common size"
           >
-            종료하고 진짜<span class="mobile-br"> </span>훈련하러 가기 GO!GO!
+            종료하고 진짜<span class="mobile-br"></span>훈련하러 가기 GO!GO!
           </button>
         </div>
       </div>
