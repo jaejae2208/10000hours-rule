@@ -6,11 +6,11 @@
   --quote-color: #f5df4d;
 }
 
-button:focus,
+/* button:focus,
 a:focus {
   outline: 2px solid #4d90fe;
   outline-offset: 2px;
-}
+} */
 
 /* 폰트 */
 @font-face {
