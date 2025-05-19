@@ -503,6 +503,10 @@ footer p:last-child {
     align-items: center;
     gap: 12px;
   }
+
+  .hidden {
+    display: none;
+  }
 }
 
 /* 730px - second break-point */
@@ -530,6 +534,9 @@ footer p:last-child {
     line-height: 1.2;
     padding-left: 35px;
     padding-right: 35px;
+  }
+  .hidden {
+    display: none;
   }
 }
 
@@ -695,7 +702,9 @@ footer p:last-child {
     text-align: left;
     margin: 0;
   }
-
+  .hidden {
+    display: none;
+  }
   /* 훈련하러가기 GO! GO! 버튼 */
   .train-btn {
     height: 128px;
